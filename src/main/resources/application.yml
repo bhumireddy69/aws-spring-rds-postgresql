@@ -5,7 +5,8 @@ spring:
     active: dev  
   main:
     banner-mode: off
-server:  port: 8090
+server:
+  port: 8090
 
 ---
 #JPA config for Postgresql
@@ -21,9 +22,9 @@ spring:
   #Datasource configuration
   datasource:
     #driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:postgresql://practicedb.cl3djkyop5su.us-east-1.rds.amazonaws.com:5432/practicedb;
+    url: jdbc:postgresql://practicedb.us-east-1.rds.amazonaws.com:5432/practicedb;
     username: postgres
-    password: Sonam123
+    password: xxxxx
   jpa:
     properties:
       hibernate:
@@ -60,7 +61,11 @@ spring:
     #properties.smtp.starttls.enable=true
 #Mail Props end
 #Actuator Props
-management:  endpoints:    web:      exposure:        include: "*"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
   endpoint:
     health:
       show-details: always
